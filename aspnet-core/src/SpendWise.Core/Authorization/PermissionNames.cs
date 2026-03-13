@@ -13,4 +13,9 @@ public static class PermissionNames
     public const string Pages_Expenses_Create = "Pages.Expenses.Create";
     public const string Pages_Expenses_Edit = "Pages.Expenses.Edit";
     public const string Pages_Expenses_Delete = "Pages.Expenses.Delete";
+
+    public const string Pages_Categories = "Pages.Categories";
+    public const string Pages_Categories_Create = "Pages.Categories.Create";
+    public const string Pages_Categories_Edit = "Pages.Categories.Edit";
+    public const string Pages_Categories_Delete = "Pages.Categories.Delete";
 }

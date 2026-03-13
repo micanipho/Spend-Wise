@@ -3,6 +3,7 @@ using SpendWise.Authorization.Roles;
 using SpendWise.Authorization.Users;
 using SpendWise.MultiTenancy;
 using Microsoft.EntityFrameworkCore;
+using SpendWise.Categories;
 using SpendWise.Expenses;
 
 namespace SpendWise.EntityFrameworkCore;
@@ -12,6 +13,8 @@ public class SpendWiseDbContext : AbpZeroDbContext<Tenant, Role, User, SpendWise
     /* Define a DbSet for each entity of the application */
 
     public DbSet<Expense> Expenses { get; set; }
+
+    public DbSet<Category> Categories { get; set; }
 
     public SpendWiseDbContext(DbContextOptions<SpendWiseDbContext> options)
         : base(options)

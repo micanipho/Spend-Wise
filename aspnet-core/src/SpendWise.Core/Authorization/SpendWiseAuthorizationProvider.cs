@@ -17,6 +17,11 @@ public class SpendWiseAuthorizationProvider : AuthorizationProvider
         expensesPermission.CreateChildPermission(PermissionNames.Pages_Expenses_Create, L("CreateExpense"));
         expensesPermission.CreateChildPermission(PermissionNames.Pages_Expenses_Edit, L("EditExpense"));
         expensesPermission.CreateChildPermission(PermissionNames.Pages_Expenses_Delete, L("DeleteExpense"));
+
+        var categoriesPermission = context.CreatePermission(PermissionNames.Pages_Categories, L("Categories"));
+        categoriesPermission.CreateChildPermission(PermissionNames.Pages_Categories_Create, L("CreateCategory"));
+        categoriesPermission.CreateChildPermission(PermissionNames.Pages_Categories_Edit, L("EditCategory"));
+        categoriesPermission.CreateChildPermission(PermissionNames.Pages_Categories_Delete, L("DeleteCategory"));
     }
 
     private static ILocalizableString L(string name)
