@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using SpendWise.EntityFrameworkCore;
 
@@ -11,9 +12,11 @@ using SpendWise.EntityFrameworkCore;
 namespace SpendWise.Migrations
 {
     [DbContext(typeof(SpendWiseDbContext))]
-    partial class SpendWiseDbContextModelSnapshot : ModelSnapshot
+    [Migration("20260313101659_AddExpensesTable")]
+    partial class AddExpensesTable
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

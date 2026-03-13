@@ -3,8 +3,6 @@ using Abp.AspNetCore.Mvc.Antiforgery;
 using Abp.AspNetCore.SignalR.Hubs;
 using Abp.Castle.Logging.Log4Net;
 using Abp.Extensions;
-using SpendWise.Configuration;
-using SpendWise.Identity;
 using Castle.Facilities.Logging;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -13,6 +11,9 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
+using Scalar.AspNetCore;
+using SpendWise.Configuration;
+using SpendWise.Identity;
 using System;
 using System.IO;
 using System.Linq;
@@ -101,6 +102,12 @@ namespace SpendWise.Web.Host.Startup
                 endpoints.MapHub<AbpCommonHub>("/signalr");
                 endpoints.MapControllerRoute("default", "{controller=Home}/{action=Index}/{id?}");
                 endpoints.MapControllerRoute("defaultWithArea", "{area}/{controller=Home}/{action=Index}/{id?}");
+                endpoints.MapScalarApiReference("/scalar", options =>
+                {
+                    options.WithTitle("SpendWise API");
+                    options.WithOpenApiRoutePattern("/swagger/{documentName}/swagger.json");
+                    options.AddDocument("v1", "SpendWise API v1");
+                });
             });
 
             // Enable middleware to serve generated Swagger as a JSON endpoint
