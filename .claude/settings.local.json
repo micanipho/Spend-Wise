@@ -5,6 +5,9 @@
       "Bash(dotnet ef:*)",
       "Bash(dotnet build:*)",
       "Bash(dotnet restore:*)"
+    ],
+    "additionalDirectories": [
+      "c:\\Users\\Nhlakanipho\\Documents\\Projects\\Personal\\SpendWise\\aspnet-core\\src\\SpendWise.Web.Host"
     ]
   }
 }
