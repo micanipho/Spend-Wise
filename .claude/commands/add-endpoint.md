@@ -316,7 +316,7 @@ Print a checklist of everything created/modified:
 
 | Mistake | Fix |
 |---|---|
-| `CreateUpdate{EntityName}Dto` doesn't extend `EntityDto<T>` | ABP's `TUpdateInput` constraint requires `IEntityDto<T>` — always extend `EntityDto<{PkType}>` |
+| `CreateUpdate{EntityName}Dto` doesn't extend `EntityDto<T>` | ABP's `TUpdateInput` constraint requires `IEntityDto<T>` — always extend`EntityDto<{PkType}>` |
 | Using `Abp.Collections.Extensions` for `WhereIf` | Returns `IEnumerable<T>` — use `Abp.Linq.Extensions` instead |
 | `internal` class/interface | ABP DI won't register it — always use `public` |
 | `[AutoMapFrom]`/`[AutoMapTo]` alongside a MapProfile | Duplicate mappings cause conflicts — pick one; prefer the Profile |
