@@ -10,11 +10,7 @@ WORKDIR "/src/src/SpendWise.Web.Host"
 RUN dotnet restore
 
 WORKDIR /src
-COPY ["aspnet-core/src/SpendWise.Web.Host", "src/SpendWise.Web.Host"]
-COPY ["aspnet-core/src/SpendWise.Web.Core", "src/SpendWise.Web.Core"]
-COPY ["aspnet-core/src/SpendWise.Application", "src/SpendWise.Application"]
-COPY ["aspnet-core/src/SpendWise.Core", "src/SpendWise.Core"]
-COPY ["aspnet-core/src/SpendWise.EntityFrameworkCore", "src/SpendWise.EntityFrameworkCore"]
+COPY ["aspnet-core/src/", "src/"]
 WORKDIR "/src/src/SpendWise.Web.Host"
 RUN dotnet publish -c Release -o /publish --no-restore
 
