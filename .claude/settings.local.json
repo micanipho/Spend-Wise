@@ -4,7 +4,8 @@
       "Bash(xargs ls:*)",
       "Bash(dotnet ef:*)",
       "Bash(dotnet build:*)",
-      "Bash(dotnet restore:*)"
+      "Bash(dotnet restore:*)",
+      "Bash(docker build:*)"
     ],
     "additionalDirectories": [
       "c:\\Users\\Nhlakanipho\\Documents\\Projects\\Personal\\SpendWise\\aspnet-core\\src\\SpendWise.Web.Host"
